@@ -42,9 +42,17 @@ h1, h2, h3, h4, h5, h6 {
   --tertiary-color: #00ADB5;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--background-color);
   font-family: "Roboto";
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative
 }
 
 #headerDesign {
@@ -164,6 +172,7 @@ body {
   color: var(--background-color);
   border-radius: 25px 25px 20px 20px;
   box-shadow: 2px 2px 5px black;
+  font-size: 1.2vw;
 }
 
 .projectContainer img {
@@ -247,7 +256,7 @@ body {
 }
 
 #infoContainer .iconContainer .icon {
-  height: 40px;
+  height: 3vw;
   width: auto;
 }
 
@@ -270,5 +279,227 @@ body {
 @keyframes iconHoverReverseContact {
   from {filter: brightness(0) saturate(100%) invert(13%) sepia(14%) saturate(918%) hue-rotate(176deg) brightness(93%) contrast(91%);}
   to {filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(184%) hue-rotate(95deg) brightness(117%) contrast(87%);}
+}
+
+@media (max-width:950px) {
+  #headerDesign {
+    transform: rotate(-15deg) translateY(-70vh);
+  }
+
+  #aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 10vw 5vh 10vw;
+  }
+
+  #imgContainer {
+    height: 40vw;
+    width: 40vw;
+    margin-bottom: 2vh;
+  }
+
+  #imgText {
+    font-size: 4.5vw;
+  }
+
+  #descContainer {
+    height: 40vw;
+    padding: 2vh 2vw;
+    border-radius: 20px;
+  }
+
+  #descContainer .header {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  #descContainer .desc {
+    font-size: 2vw;
+  }
+
+  #descContainer .iconContainer img {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  #workHeader {
+    font-size: 5vw;
+    margin-bottom: 2vh;
+  }
+
+  #workContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .projectContainer {
+    font-size: 2vw;
+  }
+
+  .projectContainer .textContainer {
+    padding: 0.5vw 1.5vw 1.5vw 1.5vw;
+  }
+
+  .headerContainer .header {
+    font-size: 3vw;
+  }
+
+  .iconContainer img {
+    height: 3vw;
+    width: 3vw;
+  }
+
+  #infoContainer {
+    font-size: 3vw;
+  }
+
+  #infoContainer .header {
+    font-size: 5vw;
+  }
+
+  #infoContainer .icon {
+    height: 3.5vw;
+  }
+
+  #infoContainer .iconContainer .icon {
+    height: 5vw;
+    width: auto;
+  }
+
+  #contactMeContainer .imageOfMe {
+    height: auto;
+    object-fit: cover;
+    object-position: 30%;
+  }
+}
+
+@media (max-width: 617px) {
+  #headerDesign {
+    transform: rotate(-15deg) translateY(-50vh);
+  }
+
+  #aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 10vw 5vh 10vw;
+  }
+
+  #imgContainer {
+    height: 60vw;
+    width: 60vw;
+    margin-bottom: 2vh;
+  }
+
+  #imgText {
+    font-size: 5.5vw;
+  }
+
+  #descContainer {
+    height: 110vw;
+    padding: 2vh 2vw;
+    border-radius: 20px;
+  }
+
+  #descContainer .header {
+    font-size: 8vw;
+    text-align: center;
+  }
+
+  #descContainer .desc {
+    font-size: 4vw;
+  }
+
+  #descContainer .iconContainer {
+    margin-right: auto;
+    gap: 4vw;
+  }
+
+  #descContainer .iconContainer img {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  #workHeader {
+    font-size: 10vw;
+    padding-left: 0;
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+
+  #workContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .projectContainer {
+    font-size: 3.5vw;
+  }
+
+  .projectContainer .textContainer {
+    padding: 1vw 2vw 2vw 2vw;
+  }
+
+  .headerContainer .header {
+    font-size: 6vw;
+  }
+
+  .headerContainer .iconContainer {
+    gap: 1vw;
+  }
+
+  .iconContainer img {
+    height: 6vw;
+    width: 6vw;
+  }
+
+  #contactMeContainer {
+    flex-direction: column;
+  }
+
+  #infoContainer {
+    font-size: 4vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vh;
+  }
+
+  #infoContainer .header {
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  #infoContainer .address {
+    font-size: 4vw;
+  }
+
+  #infoContainer .phoneNumber {
+    font-size: 4vw;
+  }
+
+  #infoContainer .phoneNumber img {
+    display: none;
+  }
+
+  #infoContainer .email {
+    font-size: 4vw;
+  }
+
+  #infoContainer .email img {
+    display: none;
+  }
+
+  #infoContainer .iconContainer {
+    gap: 3vw;
+  }
+
+  #infoContainer .iconContainer .icon {
+    height: 10vw;
+    width: auto;
+  }
+
+  #contactMeContainer .imageOfMe {
+    width: 100vw;
+  }
 }
 
