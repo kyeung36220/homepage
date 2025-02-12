@@ -59,8 +59,8 @@ body {
 
 #aboutMeContainer {
   display: flex;
-  padding: 10vh 10vw;
   align-items: center;
+  padding: 10vh 10vw;
 }
 
 #imgContainer {
@@ -120,7 +120,7 @@ body {
   filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(184%) hue-rotate(95deg) brightness(117%) contrast(87%);
 }
 
-#descContainer .iconContainer img:hover {
+.clickable:hover {
   animation: iconHover 0.1s linear;
   animation-fill-mode: forwards;
   cursor: pointer;
@@ -131,7 +131,7 @@ body {
   to {filter: brightness(0) saturate(100%) invert(49%) sepia(74%) saturate(1414%) hue-rotate(144deg) brightness(89%) contrast(101%);}
 }
 
-#descContainer .iconContainer img:not(:hover) {
+.clickable:not(:hover) {
   animation: iconHoverReverse 0.1s linear;
   animation-fill-mode: forwards;
 }
@@ -141,13 +141,134 @@ body {
   to {filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(184%) hue-rotate(95deg) brightness(117%) contrast(87%);}
 }
 
-.icon {
-  height: 20px;
-}
-
 #workHeader {
   font-size: 3.5vw;
   font-family: "Playfair Display";
-  color: var(--primary-color)
+  color: var(--primary-color);
+  padding-left: 10vw;
+  margin-bottom: 1vh;
+}
+
+#workContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-bottom: 10vh;
+}
+
+.projectContainer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-radius: 25px 25px 20px 20px;
+  box-shadow: 2px 2px 5px black;
+}
+
+.projectContainer img {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.projectContainer .textContainer {
+  padding: 0.3vw 1vw 1vw 1vw;
+}
+
+.projectContainer .headerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.headerContainer .header {
+  font-size: 2vw;
+  font-family: "Playfair Display";
+  margin-right: auto;
+}
+
+.headerContainer .iconContainer {
+  display: flex;
+  gap: 0.5vw;
+}
+
+.iconContainer img {
+  height: 2vw;
+  width: 2vw;
+}
+
+.textContainer .desc {
+  margin-top: 1vh;
+}
+
+#contactMeContainer {
+  display: flex;
+  background-color: var(--tertiary-color);
+  color: var(--background-color);
+  padding: 5vh 10vw 5vh 10vw;
+}
+
+#contactMeContainer .imageOfMe {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50px;
+  margin-left: auto;
+}
+
+#infoContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5vw;
+  gap: 2vh;
+}
+
+#infoContainer .header {
+  font-size: 2.5vw;
+  font-family: "Playfair Display";
+}
+
+#infoContainer .phoneNumber {
+  display: flex;
+  align-items: center;
+}
+
+#infoContainer .email {
+  display: flex;
+  align-items: center;
+}
+
+#infoContainer .icon {
+  height: 2vw;
+  margin-right: 1vw;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(62%) hue-rotate(336deg) brightness(119%) contrast(87%);
+}
+
+#infoContainer .iconContainer {
+  display: flex;
+}
+
+#infoContainer .iconContainer .icon {
+  height: 40px;
+  width: auto;
+}
+
+#infoContainer .iconContainer .icon:hover {
+  animation: iconHoverContact 0.1s linear;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes iconHoverContact {
+  from {filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(184%) hue-rotate(95deg) brightness(117%) contrast(87%);}
+  to {filter: brightness(0) saturate(100%) invert(13%) sepia(14%) saturate(918%) hue-rotate(176deg) brightness(93%) contrast(91%);}
+}
+
+#infoContainer .iconContainer .icon:not(:hover) {
+  animation: iconHoverReverseContact 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes iconHoverReverseContact {
+  from {filter: brightness(0) saturate(100%) invert(13%) sepia(14%) saturate(918%) hue-rotate(176deg) brightness(93%) contrast(91%);}
+  to {filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(184%) hue-rotate(95deg) brightness(117%) contrast(87%);}
 }
 
