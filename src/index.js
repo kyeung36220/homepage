@@ -6,11 +6,18 @@ import todoJpg from "./projectImages/todo.jpg"
 import battleshipJpg from "./projectImages/battleship.jpg"
 import weatherappJpg from "./projectImages/weatherapp.jpg"
 import evaJpg from "./projectImages/eva.jpg"
-import tictactoeJpg from "./projectImages/tictactoe.jpg"
 import libJpg from "./projectImages/lib.jpg"
+import resumePng from "./projectImages/resume.png"
 
 function addProjects() {
     const projects = [
+        {
+            name: "Swift Resume", 
+            desc: "Create and adjust your resume and download a PDF of it after you're done!", 
+            image: resumePng,
+            githubLink: "https://github.com/kyeung36220/resume-creator",
+            livePreviewLink: "https://swift-resume.pages.dev/",
+        },
         {
             name: "To-Do List", 
             desc: "Adjustable and locally stored to-do list that make any list of tasks easy to remember!", 
@@ -38,13 +45,6 @@ function addProjects() {
             image: evaJpg,
             githubLink: "https://github.com/kyeung36220/restaurant-page",
             livePreviewLink: "https://kyeung36220.github.io/restaurant-page/",
-        },
-        {
-            name: "Tic-Tac-Toe", 
-            desc: "A 2-player game where the goal is to get three in a row! Comes with comforting UI and customizable names.", 
-            image: tictactoeJpg,
-            githubLink: "https://github.com/kyeung36220/tic-tac-toe",
-            livePreviewLink: "https://kyeung36220.github.io/tic-tac-toe/",
         },
         {
             name: "Library Tracker", 
