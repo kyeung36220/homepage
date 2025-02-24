@@ -47,12 +47,16 @@ html {
   overflow-x: hidden;
 }
 
+#mainBody {
+  display: block !important;
+}
+
 body {
   background-color: var(--background-color);
   font-family: "Roboto";
   max-width: 100%;
   overflow-x: hidden;
-  position: relative
+  position: relative;
 }
 
 #headerDesign {
